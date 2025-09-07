@@ -9,7 +9,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { href: "/", label: "Home" },

@@ -73,7 +73,7 @@ export default function AcademicsPage() {
     },
     {
       id: "high",
-      title: "High School",
+      title: "College",
       grades: "Grades 9-12",
       description:
         "College preparation and career readiness through rigorous academics and advanced placement courses.",
@@ -124,7 +124,7 @@ export default function AcademicsPage() {
       icon: BookOpen,
       title: "Advanced Placement",
       description:
-        "College-level courses and examinations for high school students seeking academic challenge.",
+        "College-level courses and examinations for College students seeking academic challenge.",
     },
     {
       icon: Users,
@@ -156,7 +156,7 @@ export default function AcademicsPage() {
               Student
             </h1>
             <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-              From kindergarten through high school graduation, our rigorous
+              From kindergarten through College graduation, our rigorous
               curriculum prepares students for success in college, career, and
               life.
             </p>
@@ -165,7 +165,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Academic Achievement Stats */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
@@ -178,7 +178,7 @@ export default function AcademicsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Academic Programs */}
       <section className="py-20">
@@ -197,7 +197,7 @@ export default function AcademicsPage() {
             <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger value="elementary">Elementary</TabsTrigger>
               <TabsTrigger value="middle">Middle School</TabsTrigger>
-              <TabsTrigger value="high">High School</TabsTrigger>
+              <TabsTrigger value="high">College</TabsTrigger>
             </TabsList>
 
             {programs.map((program) => (

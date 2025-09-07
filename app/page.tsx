@@ -31,12 +31,12 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge variant="secondary" className="w-fit">
-                  Excellence in Education Since 1985
+                  Excellence in Education Since 2002
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-balance leading-tight">
                   Welcome to{" "}
-                  <span className="text-primary">Omobola School</span> –
-                  Building Future Leaders
+                  <span className="text-primary">Omobola Group Of School</span>{" "}
+                  – Building Future Leaders
                 </h1>
                 <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
                   Empowering students through innovative education, character
@@ -87,21 +87,21 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-primary">1,200+</div>
+              <div className="text-4xl font-bold text-primary">280+</div>
               <div className="text-muted-foreground">Students</div>
             </div>
             <div className="text-center space-y-2">
               <div className="text-4xl font-bold text-primary">95%</div>
               <div className="text-muted-foreground">Graduation Rate</div>
             </div>
-            <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-primary">150+</div>
+            {/* <div className="text-center space-y-2">
+              <div className="text-4xl font-bold text-primary">1+</div>
               <div className="text-muted-foreground">Faculty Members</div>
-            </div>
+            </div> */}
             <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-primary">20+</div>
+              <div className="text-4xl font-bold text-primary">15+</div>
               <div className="text-muted-foreground">Years of Excellence</div>
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function HomePage() {
               Our Academic Programs
             </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Comprehensive education from early childhood through high school
+              Comprehensive education from early childhood through college
               graduation.
             </p>
           </div>
@@ -276,13 +276,13 @@ export default function HomePage() {
               <div className="aspect-video relative">
                 <Image
                   src="/image1.jpg"
-                  alt="High school graduation ceremony"
+                  alt="College graduation ceremony"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardHeader>
-                <CardTitle>High School</CardTitle>
+                <CardTitle>College</CardTitle>
                 <CardDescription>
                   University preparation and career readiness for grades 9-12
                   with advanced coursework.

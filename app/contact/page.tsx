@@ -391,7 +391,7 @@ export default function ContactPage() {
             <div className="relative">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7882.874660437997!2d3.8958!3d7.3091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10398d99f1c2b4c3%3A0x9a8d93cbbc26873f!2sOlomi%20Olounde%2C%20Ibadan!5e0!3m2!1sen!2sng!4v1694012345678"
-                width="600"
+                width="md:w-600 w-auto"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen={true}
