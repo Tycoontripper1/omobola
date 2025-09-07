@@ -1,9 +1,25 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { BookOpen, Users, Award, Calendar, ArrowRight, Star, GraduationCap, Heart, Target } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  BookOpen,
+  Users,
+  Award,
+  Calendar,
+  ArrowRight,
+  Star,
+  GraduationCap,
+  Heart,
+  Target,
+} from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -18,11 +34,14 @@ export default function HomePage() {
                   Excellence in Education Since 1985
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-balance leading-tight">
-                  Welcome to <span className="text-primary">Omobola School</span> – Building Future Leaders
+                  Welcome to{" "}
+                  <span className="text-primary">Omobola School</span> –
+                  Building Future Leaders
                 </h1>
                 <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-                  Empowering students through innovative education, character development, and community engagement.
-                  Join our family of learners and discover your potential.
+                  Empowering students through innovative education, character
+                  development, and community engagement. Join our family of
+                  learners and discover your potential.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -32,14 +51,19 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="text-lg px-8 bg-transparent"
+                >
                   <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=800&text=Students+Learning+Together"
+                src="/image1.jpg"
                 alt="Students learning together at Omobola School"
                 width={800}
                 height={600}
@@ -77,7 +101,7 @@ export default function HomePage() {
               <div className="text-muted-foreground">Faculty Members</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl font-bold text-primary">40+</div>
+              <div className="text-4xl font-bold text-primary">20+</div>
               <div className="text-muted-foreground">Years of Excellence</div>
             </div>
           </div>
@@ -88,10 +112,13 @@ export default function HomePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Why Choose Omobola School?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+              Why Choose Omobola School?
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              We provide a comprehensive educational experience that nurtures academic excellence, character
-              development, and lifelong learning skills.
+              We provide a comprehensive educational experience that nurtures
+              academic excellence, character development, and lifelong learning
+              skills.
             </p>
           </div>
 
@@ -103,7 +130,8 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Academic Excellence</CardTitle>
                 <CardDescription>
-                  Rigorous curriculum designed to challenge and inspire students to reach their full potential.
+                  Rigorous curriculum designed to challenge and inspire students
+                  to reach their full potential.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -115,7 +143,8 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Character Development</CardTitle>
                 <CardDescription>
-                  Building strong moral foundations and leadership skills for responsible citizenship.
+                  Building strong moral foundations and leadership skills for
+                  responsible citizenship.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -127,7 +156,8 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Community Engagement</CardTitle>
                 <CardDescription>
-                  Active participation in community service and social responsibility programs.
+                  Active participation in community service and social
+                  responsibility programs.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -139,7 +169,8 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Expert Faculty</CardTitle>
                 <CardDescription>
-                  Dedicated teachers with advanced degrees and passion for student success.
+                  Dedicated teachers with advanced degrees and passion for
+                  student success.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -151,7 +182,8 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Personalized Learning</CardTitle>
                 <CardDescription>
-                  Individualized attention and support to help every student achieve their goals.
+                  Individualized attention and support to help every student
+                  achieve their goals.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -163,7 +195,8 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Achievement Recognition</CardTitle>
                 <CardDescription>
-                  Celebrating student accomplishments in academics, arts, sports, and leadership.
+                  Celebrating student accomplishments in academics, arts,
+                  sports, and leadership.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -175,9 +208,12 @@ export default function HomePage() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Our Academic Programs</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+              Our Academic Programs
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Comprehensive education from early childhood through high school graduation.
+              Comprehensive education from early childhood through high school
+              graduation.
             </p>
           </div>
 
@@ -185,7 +221,7 @@ export default function HomePage() {
             <Card className="overflow-hidden">
               <div className="aspect-video relative">
                 <Image
-                  src="/placeholder.svg?height=200&width=400&text=Elementary+Students"
+                  src="/image4.jpg"
                   alt="Elementary students in classroom"
                   fill
                   className="object-cover"
@@ -194,11 +230,16 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Elementary School</CardTitle>
                 <CardDescription>
-                  Building strong foundations in literacy, numeracy, and social skills for grades K-5.
+                  Building strong foundations in literacy, numeracy, and social
+                  skills for grades K-5.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button asChild variant="outline" className="w-full bg-transparent">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full bg-transparent"
+                >
                   <Link href="/academics#elementary">Learn More</Link>
                 </Button>
               </CardContent>
@@ -216,11 +257,16 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>Middle School</CardTitle>
                 <CardDescription>
-                  Developing critical thinking and preparing for advanced studies in grades 6-8.
+                  Developing critical thinking and preparing for advanced
+                  studies in grades 6-8.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button asChild variant="outline" className="w-full bg-transparent">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full bg-transparent"
+                >
                   <Link href="/academics#middle">Learn More</Link>
                 </Button>
               </CardContent>
@@ -229,7 +275,7 @@ export default function HomePage() {
             <Card className="overflow-hidden">
               <div className="aspect-video relative">
                 <Image
-                  src="/placeholder.svg?height=200&width=400&text=High+School+Graduation"
+                  src="/image1.jpg"
                   alt="High school graduation ceremony"
                   fill
                   className="object-cover"
@@ -238,11 +284,16 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle>High School</CardTitle>
                 <CardDescription>
-                  College preparation and career readiness for grades 9-12 with advanced coursework.
+                  University preparation and career readiness for grades 9-12
+                  with advanced coursework.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button asChild variant="outline" className="w-full bg-transparent">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full bg-transparent"
+                >
                   <Link href="/academics#high">Learn More</Link>
                 </Button>
               </CardContent>
@@ -254,13 +305,21 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-balance">Ready to Join Our School Community?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+            Ready to Join Our School Community?
+          </h2>
           <p className="text-xl opacity-90 text-pretty">
-            Take the first step towards your child's bright future. Contact us today to learn more about enrollment
-            opportunities and schedule a campus visit.
+            Take the first step towards your child's bright future. Contact us
+            today to learn more about enrollment opportunities and schedule a
+            campus visit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="text-lg px-8">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="text-lg px-8"
+            >
               <Link href="/contact">
                 Schedule a Visit
                 <Calendar className="ml-2 h-5 w-5" />
@@ -278,5 +337,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

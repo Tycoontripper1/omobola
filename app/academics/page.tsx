@@ -1,9 +1,15 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   BookOpen,
   Users,
@@ -15,7 +21,7 @@ import {
   Palette,
   Trophy,
   Globe,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function AcademicsPage() {
   const programs = [
@@ -25,8 +31,16 @@ export default function AcademicsPage() {
       grades: "Kindergarten - Grade 5",
       description:
         "Building strong foundations in literacy, numeracy, and social skills through engaging, age-appropriate curriculum.",
-      image: "/placeholder.svg?height=400&width=600&text=Elementary+Classroom",
-      subjects: ["Language Arts", "Mathematics", "Science", "Social Studies", "Art", "Music", "Physical Education"],
+      image: "/image4.jpg",
+      subjects: [
+        "Language Arts",
+        "Mathematics",
+        "Science",
+        "Social Studies",
+        "Art",
+        "Music",
+        "Physical Education",
+      ],
       highlights: [
         "Small class sizes (15-20 students)",
         "Individualized learning plans",
@@ -63,7 +77,7 @@ export default function AcademicsPage() {
       grades: "Grades 9-12",
       description:
         "College preparation and career readiness through rigorous academics and advanced placement courses.",
-      image: "/placeholder.svg?height=400&width=600&text=High+School+Students",
+      image: "/image1.jpg",
       subjects: [
         "AP Courses",
         "Advanced Sciences",
@@ -79,47 +93,53 @@ export default function AcademicsPage() {
         "National Honor Society",
       ],
     },
-  ]
+  ];
 
   const specialPrograms = [
     {
       icon: Microscope,
       title: "STEAM Program",
-      description: "Science, Technology, Engineering, Arts, and Mathematics integration across all grade levels.",
+      description:
+        "Science, Technology, Engineering, Arts, and Mathematics integration across all grade levels.",
     },
     {
       icon: Globe,
       title: "Global Studies",
-      description: "International perspective through language learning, cultural exchange, and global citizenship.",
+      description:
+        "International perspective through language learning, cultural exchange, and global citizenship.",
     },
     {
       icon: Palette,
       title: "Arts Academy",
-      description: "Comprehensive arts education including visual arts, music, theater, and digital media.",
+      description:
+        "Comprehensive arts education including visual arts, music, theater, and digital media.",
     },
     {
       icon: Trophy,
       title: "Athletics Program",
-      description: "Competitive sports teams and physical education promoting teamwork and healthy living.",
+      description:
+        "Competitive sports teams and physical education promoting teamwork and healthy living.",
     },
     {
       icon: BookOpen,
       title: "Advanced Placement",
-      description: "College-level courses and examinations for high school students seeking academic challenge.",
+      description:
+        "College-level courses and examinations for high school students seeking academic challenge.",
     },
     {
       icon: Users,
       title: "Leadership Development",
-      description: "Student government, peer mentoring, and community service opportunities.",
+      description:
+        "Student government, peer mentoring, and community service opportunities.",
     },
-  ]
+  ];
 
   const achievements = [
     { metric: "98%", label: "College Acceptance Rate" },
     { metric: "4.2", label: "Average GPA" },
     { metric: "1,450", label: "Average SAT Score" },
     { metric: "25+", label: "College Partnerships" },
-  ]
+  ];
 
   return (
     <div className="flex flex-col">
@@ -131,11 +151,14 @@ export default function AcademicsPage() {
               Academic Excellence
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-balance leading-tight">
-              Comprehensive <span className="text-primary">Academic Programs</span> for Every Student
+              Comprehensive{" "}
+              <span className="text-primary">Academic Programs</span> for Every
+              Student
             </h1>
             <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-              From kindergarten through high school graduation, our rigorous curriculum prepares students for success in
-              college, career, and life.
+              From kindergarten through high school graduation, our rigorous
+              curriculum prepares students for success in college, career, and
+              life.
             </p>
           </div>
         </div>
@@ -147,7 +170,9 @@ export default function AcademicsPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center space-y-2">
-                <div className="text-4xl font-bold text-primary">{achievement.metric}</div>
+                <div className="text-4xl font-bold text-primary">
+                  {achievement.metric}
+                </div>
                 <div className="text-muted-foreground">{achievement.label}</div>
               </div>
             ))}
@@ -159,10 +184,12 @@ export default function AcademicsPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Academic Programs by Level</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+              Academic Programs by Level
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Age-appropriate curriculum designed to challenge and inspire students at every stage of their educational
-              journey.
+              Age-appropriate curriculum designed to challenge and inspire
+              students at every stage of their educational journey.
             </p>
           </div>
 
@@ -174,19 +201,29 @@ export default function AcademicsPage() {
             </TabsList>
 
             {programs.map((program) => (
-              <TabsContent key={program.id} value={program.id} className="space-y-8">
+              <TabsContent
+                key={program.id}
+                value={program.id}
+                className="space-y-8"
+              >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div className="space-y-6">
                     <div>
                       <Badge variant="outline" className="mb-4">
                         {program.grades}
                       </Badge>
-                      <h3 className="text-3xl font-bold mb-4">{program.title}</h3>
-                      <p className="text-lg text-muted-foreground leading-relaxed">{program.description}</p>
+                      <h3 className="text-3xl font-bold mb-4">
+                        {program.title}
+                      </h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">
+                        {program.description}
+                      </p>
                     </div>
 
                     <div>
-                      <h4 className="text-xl font-semibold mb-3">Core Subjects</h4>
+                      <h4 className="text-xl font-semibold mb-3">
+                        Core Subjects
+                      </h4>
                       <div className="flex flex-wrap gap-2">
                         {program.subjects.map((subject, index) => (
                           <Badge key={index} variant="secondary">
@@ -197,12 +234,19 @@ export default function AcademicsPage() {
                     </div>
 
                     <div>
-                      <h4 className="text-xl font-semibold mb-3">Program Highlights</h4>
+                      <h4 className="text-xl font-semibold mb-3">
+                        Program Highlights
+                      </h4>
                       <ul className="space-y-2">
                         {program.highlights.map((highlight, index) => (
-                          <li key={index} className="flex items-center space-x-2">
+                          <li
+                            key={index}
+                            className="flex items-center space-x-2"
+                          >
                             <Award className="h-4 w-4 text-primary flex-shrink-0" />
-                            <span className="text-muted-foreground">{highlight}</span>
+                            <span className="text-muted-foreground">
+                              {highlight}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -229,21 +273,29 @@ export default function AcademicsPage() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Special Programs & Enrichment</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+              Special Programs & Enrichment
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Beyond core academics, we offer specialized programs to develop students' unique talents and interests.
+              Beyond core academics, we offer specialized programs to develop
+              students' unique talents and interests.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specialPrograms.map((program, index) => (
-              <Card key={index} className="border-2 hover:border-primary/20 transition-colors">
+              <Card
+                key={index}
+                className="border-2 hover:border-primary/20 transition-colors"
+              >
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <program.icon className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl">{program.title}</CardTitle>
-                  <CardDescription className="leading-relaxed">{program.description}</CardDescription>
+                  <CardDescription className="leading-relaxed">
+                    {program.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -256,10 +308,13 @@ export default function AcademicsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-balance">Academic Calendar & Schedule</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+                Academic Calendar & Schedule
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our academic year is carefully structured to maximize learning opportunities while providing appropriate
-                breaks for rest and enrichment activities.
+                Our academic year is carefully structured to maximize learning
+                opportunities while providing appropriate breaks for rest and
+                enrichment activities.
               </p>
 
               <div className="space-y-4">
@@ -269,7 +324,9 @@ export default function AcademicsPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Academic Year</h4>
-                    <p className="text-muted-foreground">August - June (180 instructional days)</p>
+                    <p className="text-muted-foreground">
+                      August - June (180 instructional days)
+                    </p>
                   </div>
                 </div>
 
@@ -279,7 +336,9 @@ export default function AcademicsPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold">School Hours</h4>
-                    <p className="text-muted-foreground">8:00 AM - 3:30 PM (Monday - Friday)</p>
+                    <p className="text-muted-foreground">
+                      8:00 AM - 3:30 PM (Monday - Friday)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -302,7 +361,9 @@ export default function AcademicsPage() {
               <CardContent className="space-y-4">
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="font-semibold">Parent-Teacher Conferences</h4>
-                  <p className="text-sm text-muted-foreground">March 15-16, 2024</p>
+                  <p className="text-sm text-muted-foreground">
+                    March 15-16, 2024
+                  </p>
                 </div>
                 <div className="border-l-4 border-secondary pl-4">
                   <h4 className="font-semibold">Science Fair</h4>
@@ -310,7 +371,9 @@ export default function AcademicsPage() {
                 </div>
                 <div className="border-l-4 border-primary pl-4">
                   <h4 className="font-semibold">Spring Break</h4>
-                  <p className="text-sm text-muted-foreground">April 22-26, 2024</p>
+                  <p className="text-sm text-muted-foreground">
+                    April 22-26, 2024
+                  </p>
                 </div>
                 <div className="border-l-4 border-secondary pl-4">
                   <h4 className="font-semibold">Graduation Ceremony</h4>
@@ -322,5 +385,5 @@ export default function AcademicsPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

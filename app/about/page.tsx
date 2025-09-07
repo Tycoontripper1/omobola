@@ -1,7 +1,21 @@
-import Image from "next/image"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Users, BookOpen, Heart, Target, Globe, Lightbulb, Shield } from "lucide-react"
+import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Users,
+  BookOpen,
+  Heart,
+  Target,
+  Globe,
+  Lightbulb,
+  Shield,
+} from "lucide-react";
 
 export default function AboutPage() {
   const values = [
@@ -41,7 +55,7 @@ export default function AboutPage() {
       description:
         "Providing a secure, nurturing environment where all students feel valued, respected, and supported.",
     },
-  ]
+  ];
 
   const leadership = [
     {
@@ -51,10 +65,10 @@ export default function AboutPage() {
       bio: "With over 20 years in education, Dr. Johnson brings innovative leadership and a passion for student success to Omobola School.",
     },
     {
-      name: "Mr. Michael Chen",
+      name: "Mr. Olalere Babatunde",
       position: "Vice Principal",
-      image: "/placeholder.svg?height=300&width=300&text=Mr.+Michael+Chen",
-      bio: "Mr. Chen oversees curriculum development and ensures our academic programs meet the highest standards of excellence.",
+      image: "/principal.jpeg",
+      bio: "Mr. Olalere oversees curriculum development and ensures our academic programs meet the highest standards of excellence.",
     },
     {
       name: "Ms. Emily Rodriguez",
@@ -62,7 +76,7 @@ export default function AboutPage() {
       image: "/placeholder.svg?height=300&width=300&text=Ms.+Emily+Rodriguez",
       bio: "Ms. Rodriguez focuses on student welfare, character development, and creating a positive school culture.",
     },
-  ]
+  ];
 
   return (
     <div className="flex flex-col">
@@ -72,15 +86,16 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <Badge variant="secondary" className="w-fit">
-                About Omobola School
+                About Omobola Group Of School
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-balance leading-tight">
-                Our Story of <span className="text-primary">Excellence</span> and{" "}
-                <span className="text-secondary">Innovation</span>
+                Our Story of <span className="text-primary">Excellence</span>{" "}
+                and <span className="text-secondary">Innovation</span>
               </h1>
               <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-                For over four decades, Omobola School has been dedicated to nurturing young minds, building character,
-                and preparing students for success in an ever-changing world.
+                For over two decades, Omobola School has been dedicated to
+                nurturing young minds, building character, and preparing
+                students for success in an ever-changing world.
               </p>
             </div>
             <div className="relative">
@@ -109,8 +124,9 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground text-center leading-relaxed">
-                  To provide exceptional education that empowers students to become confident, compassionate, and
-                  capable leaders who contribute positively to their communities and the world.
+                  To provide exceptional education that empowers students to
+                  become confident, compassionate, and capable leaders who
+                  contribute positively to their communities and the world.
                 </p>
               </CardContent>
             </Card>
@@ -124,8 +140,9 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground text-center leading-relaxed">
-                  To be recognized as a premier educational institution that inspires lifelong learning, fosters
-                  innovation, and develops future leaders who make a meaningful difference in the world.
+                  To be recognized as a premier educational institution that
+                  inspires lifelong learning, fosters innovation, and develops
+                  future leaders who make a meaningful difference in the world.
                 </p>
               </CardContent>
             </Card>
@@ -137,21 +154,29 @@ export default function AboutPage() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Our Core Values</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+              Our Core Values
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              These fundamental principles guide everything we do and shape the character of our school community.
+              These fundamental principles guide everything we do and shape the
+              character of our school community.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="border-2 hover:border-primary/20 transition-colors">
+              <Card
+                key={index}
+                className="border-2 hover:border-primary/20 transition-colors"
+              >
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <value.icon className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-xl">{value.title}</CardTitle>
-                  <CardDescription className="leading-relaxed">{value.description}</CardDescription>
+                  <CardDescription className="leading-relaxed">
+                    {value.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -163,9 +188,12 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Leadership Team</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+              Leadership Team
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Meet the dedicated leaders who guide our school community toward excellence.
+              Meet the dedicated leaders who guide our school community toward
+              excellence.
             </p>
           </div>
 
@@ -173,14 +201,21 @@ export default function AboutPage() {
             {leadership.map((leader, index) => (
               <Card key={index} className="overflow-hidden">
                 <div className="aspect-square relative">
-                  <Image src={leader.image || "/placeholder.svg"} alt={leader.name} fill className="object-cover" />
+                  <Image
+                    src={leader.image || "/placeholder.svg"}
+                    alt={leader.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <CardHeader className="text-center">
                   <CardTitle className="text-xl">{leader.name}</CardTitle>
                   <Badge variant="secondary" className="w-fit mx-auto">
                     {leader.position}
                   </Badge>
-                  <CardDescription className="leading-relaxed">{leader.bio}</CardDescription>
+                  <CardDescription className="leading-relaxed">
+                    {leader.bio}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -192,7 +227,9 @@ export default function AboutPage() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Our Journey</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+              Our Journey
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty">
               Four decades of educational excellence and community impact.
             </p>
@@ -201,24 +238,28 @@ export default function AboutPage() {
           <div className="space-y-8">
             <div className="flex items-center space-x-6">
               <div className="flex-shrink-0 w-20 h-20 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">1985</span>
+                <span className="text-primary-foreground font-bold">2002</span>
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Foundation</h3>
                 <p className="text-muted-foreground">
-                  Omobola School was established with a vision to provide quality education to the community.
+                  Omobola School was established with a vision to provide
+                  quality education to the community.
                 </p>
               </div>
             </div>
 
             <div className="flex items-center space-x-6">
               <div className="flex-shrink-0 w-20 h-20 bg-secondary rounded-full flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold">1995</span>
+                <span className="text-secondary-foreground font-bold">
+                  2003
+                </span>
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Expansion</h3>
                 <p className="text-muted-foreground">
-                  Added middle school program and expanded facilities to accommodate growing enrollment.
+                  Added middle school program and expanded facilities to
+                  accommodate growing enrollment.
                 </p>
               </div>
             </div>
@@ -230,19 +271,23 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl font-semibold">Innovation</h3>
                 <p className="text-muted-foreground">
-                  Introduced technology integration and advanced placement programs.
+                  Introduced technology integration and advanced placement
+                  programs.
                 </p>
               </div>
             </div>
 
             <div className="flex items-center space-x-6">
               <div className="flex-shrink-0 w-20 h-20 bg-secondary rounded-full flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold">2024</span>
+                <span className="text-secondary-foreground font-bold">
+                  2024
+                </span>
               </div>
               <div>
                 <h3 className="text-xl font-semibold">Modern Era</h3>
                 <p className="text-muted-foreground">
-                  Continuing to lead in educational excellence with state-of-the-art facilities and programs.
+                  Continuing to lead in educational excellence with
+                  state-of-the-art facilities and programs.
                 </p>
               </div>
             </div>
@@ -250,5 +295,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
