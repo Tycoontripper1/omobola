@@ -50,7 +50,7 @@ export function Navbar() {
               href="/"
               className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
             >
-              Omobola School
+              Omobola Group Of School
             </Link>
           </div>
 
