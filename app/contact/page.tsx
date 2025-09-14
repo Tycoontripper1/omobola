@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import Head from "next/head";
 import {
   Select,
   SelectContent,
@@ -116,292 +117,311 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-6 max-w-4xl mx-auto">
-            <Badge variant="secondary" className="w-fit mx-auto">
-              Contact Us
-            </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-balance leading-tight">
-              Get in <span className="text-primary">Touch</span> with Omobola
-              Group Of School
-            </h1>
-            <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-              We're here to answer your questions, schedule campus visits, and
-              help you discover how Omobola School can be the perfect fit for
-              your child's educational journey.
-            </p>
+    <>
+      <Head>
+        <title>Omobola School | Building Future Leaders</title>
+        <meta
+          name="description"
+          content="Excellence in education, character development, and community engagement at Omobola School."
+        />
+        <meta
+          name="keywords"
+          content="school in Nigeria, quality education, omobolaschool"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://omobolaschool.com.ng/" />
+      </Head>
+      <div className="flex flex-col">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-6 max-w-4xl mx-auto">
+              <Badge variant="secondary" className="w-fit mx-auto">
+                Contact Us
+              </Badge>
+              <h1 className="text-4xl lg:text-5xl font-bold text-balance leading-tight">
+                Get in <span className="text-primary">Touch</span> with Omobola
+                Group Of School
+              </h1>
+              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+                We're here to answer your questions, schedule campus visits, and
+                help you discover how Omobola School can be the perfect fit for
+                your child's educational journey.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Form & Info */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="border-2">
-              <CardHeader>
-                <CardTitle className="text-2xl">Send Us a Message</CardTitle>
-                <CardDescription>
-                  Fill out the form below and we'll get back to you within 24
-                  hours.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) =>
-                          handleInputChange("name", e.target.value)
-                        }
-                        placeholder="Your full name"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) =>
-                          handleInputChange("email", e.target.value)
-                        }
-                        placeholder="your.email@example.com"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) =>
-                          handleInputChange("phone", e.target.value)
-                        }
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="inquiryType">Inquiry Type *</Label>
-                      <Select
-                        onValueChange={(value) =>
-                          handleInputChange("inquiryType", value)
-                        }
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select inquiry type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="admissions">Admissions</SelectItem>
-                          <SelectItem value="academics">
-                            Academic Programs
-                          </SelectItem>
-                          <SelectItem value="tuition">
-                            Tuition & Financial Aid
-                          </SelectItem>
-                          <SelectItem value="campus-tour">
-                            Campus Tour
-                          </SelectItem>
-                          <SelectItem value="general">
-                            General Information
-                          </SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject *</Label>
-                    <Input
-                      id="subject"
-                      value={formData.subject}
-                      onChange={(e) =>
-                        handleInputChange("subject", e.target.value)
-                      }
-                      placeholder="Brief subject of your inquiry"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) =>
-                        handleInputChange("message", e.target.value)
-                      }
-                      placeholder="Please provide details about your inquiry..."
-                      rows={5}
-                      required
-                    />
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full">
-                    Send Message
-                    <Send className="ml-2 h-5 w-5" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <Card key={index}>
-                      <CardHeader>
-                        <CardTitle className="flex items-center space-x-3 text-lg">
-                          <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <info.icon className="h-5 w-5 text-primary" />
-                          </div>
-                          <span>{info.title}</span>
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-1">
-                          {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-muted-foreground">
-                              {detail}
-                            </p>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-
-              <Card className="bg-primary text-primary-foreground">
+        {/* Contact Form & Info */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <Card className="border-2">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Calendar className="h-6 w-6" />
-                    <span>Schedule a Campus Visit</span>
-                  </CardTitle>
-                  <CardDescription className="text-primary-foreground/80">
-                    Experience our school community firsthand with a
-                    personalized tour.
+                  <CardTitle className="text-2xl">Send Us a Message</CardTitle>
+                  <CardDescription>
+                    Fill out the form below and we'll get back to you within 24
+                    hours.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 text-primary-foreground/90">
-                    Tours available Monday through Friday at 9:00 AM and 2:00
-                    PM. Weekend tours by appointment.
-                  </p>
-                  <Button variant="secondary" size="lg" className="w-full">
-                    Book a Tour
-                  </Button>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">Full Name *</Label>
+                        <Input
+                          id="name"
+                          value={formData.name}
+                          onChange={(e) =>
+                            handleInputChange("name", e.target.value)
+                          }
+                          placeholder="Your full name"
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email Address *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) =>
+                            handleInputChange("email", e.target.value)
+                          }
+                          placeholder="your.email@example.com"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={(e) =>
+                            handleInputChange("phone", e.target.value)
+                          }
+                          placeholder="+1 (555) 123-4567"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="inquiryType">Inquiry Type *</Label>
+                        <Select
+                          onValueChange={(value) =>
+                            handleInputChange("inquiryType", value)
+                          }
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select inquiry type" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="admissions">
+                              Admissions
+                            </SelectItem>
+                            <SelectItem value="academics">
+                              Academic Programs
+                            </SelectItem>
+                            <SelectItem value="tuition">
+                              Tuition & Financial Aid
+                            </SelectItem>
+                            <SelectItem value="campus-tour">
+                              Campus Tour
+                            </SelectItem>
+                            <SelectItem value="general">
+                              General Information
+                            </SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="subject">Subject *</Label>
+                      <Input
+                        id="subject"
+                        value={formData.subject}
+                        onChange={(e) =>
+                          handleInputChange("subject", e.target.value)
+                        }
+                        placeholder="Brief subject of your inquiry"
+                        required
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message *</Label>
+                      <Textarea
+                        id="message"
+                        value={formData.message}
+                        onChange={(e) =>
+                          handleInputChange("message", e.target.value)
+                        }
+                        placeholder="Please provide details about your inquiry..."
+                        rows={5}
+                        required
+                      />
+                    </div>
+
+                    <Button type="submit" size="lg" className="w-full">
+                      Send Message
+                      <Send className="ml-2 h-5 w-5" />
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Department Contacts */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">
-              Department Contacts
-            </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Connect directly with the right department for specialized
-              assistance.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {departments.map((dept, index) => (
-              <Card
-                key={index}
-                className="border-2 hover:border-primary/20 transition-colors"
-              >
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <dept.icon className="h-6 w-6 text-primary" />
+              {/* Contact Information */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-2xl font-bold mb-6">
+                    Contact Information
+                  </h2>
+                  <div className="space-y-6">
+                    {contactInfo.map((info, index) => (
+                      <Card key={index}>
+                        <CardHeader>
+                          <CardTitle className="flex items-center space-x-3 text-lg">
+                            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                              <info.icon className="h-5 w-5 text-primary" />
+                            </div>
+                            <span>{info.title}</span>
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <div className="space-y-1">
+                            {info.details.map((detail, idx) => (
+                              <p key={idx} className="text-muted-foreground">
+                                {detail}
+                              </p>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
                   </div>
-                  <CardTitle className="text-xl">{dept.title}</CardTitle>
-                  <CardDescription className="leading-relaxed">
-                    {dept.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center space-x-2">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">
-                      {dept.contact}
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Phone className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">
-                      {dept.phone}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold">Visit Our Campus</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Our beautiful campus is conveniently located in the heart of
-                Learning City, easily accessible by car or public
-                transportation.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <span>Adejare Junction, Olomi Olounde Area, Ibadan</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <span>
-                    Visitor parking available in front of main building
-                  </span>
-                </div>
+
+                <Card className="bg-primary text-primary-foreground">
+                  <CardHeader>
+                    <CardTitle className="flex items-center space-x-2">
+                      <Calendar className="h-6 w-6" />
+                      <span>Schedule a Campus Visit</span>
+                    </CardTitle>
+                    <CardDescription className="text-primary-foreground/80">
+                      Experience our school community firsthand with a
+                      personalized tour.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="mb-4 text-primary-foreground/90">
+                      Tours available Monday through Friday at 9:00 AM and 2:00
+                      PM. Weekend tours by appointment.
+                    </p>
+                    <Button variant="secondary" size="lg" className="w-full">
+                      Book a Tour
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
-              <Button size="lg" variant="outline" className="bg-transparent">
-                Get Directions
-              </Button>
-            </div>
-            <div className="relative">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7882.874660437997!2d3.8958!3d7.3091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10398d99f1c2b4c3%3A0x9a8d93cbbc26873f!2sOlomi%20Olounde%2C%20Ibadan!5e0!3m2!1sen!2sng!4v1694012345678"
-                width="md:w-600 w-auto"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                className="rounded-2xl shadow-xl"
-              ></iframe>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Department Contacts */}
+        <section className="py-20 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-4 mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-balance">
+                Department Contacts
+              </h2>
+              <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
+                Connect directly with the right department for specialized
+                assistance.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {departments.map((dept, index) => (
+                <Card
+                  key={index}
+                  className="border-2 hover:border-primary/20 transition-colors"
+                >
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                      <dept.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">{dept.title}</CardTitle>
+                    <CardDescription className="leading-relaxed">
+                      {dept.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <Mail className="h-4 w-4 text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">
+                        {dept.contact}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Phone className="h-4 w-4 text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">
+                        {dept.phone}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold">Visit Our Campus</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our beautiful campus is conveniently located in the heart of
+                  Learning City, easily accessible by car or public
+                  transportation.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="h-5 w-5 text-primary" />
+                    <span>Adejare Junction, Olomi Olounde Area, Ibadan</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Clock className="h-5 w-5 text-primary" />
+                    <span>
+                      Visitor parking available in front of main building
+                    </span>
+                  </div>
+                </div>
+                <Button size="lg" variant="outline" className="bg-transparent">
+                  Get Directions
+                </Button>
+              </div>
+              <div className="relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7882.874660437997!2d3.8958!3d7.3091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10398d99f1c2b4c3%3A0x9a8d93cbbc26873f!2sOlomi%20Olounde%2C%20Ibadan!5e0!3m2!1sen!2sng!4v1694012345678"
+                  width="md:w-600 w-auto"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  className="rounded-2xl shadow-xl"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
